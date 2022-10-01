@@ -34,9 +34,11 @@ public class SpaceshipEnemyManager : MonoBehaviour
 
     IEnumerator SpawnEnemiesCoroutine()
     {
-        SpawnEnemy();
-        yield return new WaitForSeconds(0.2f);
-        SpawnEnemy();
+        for (int i = 0; i < enemiesPerSpawn; i++)
+        {
+            SpawnEnemy();
+            yield return new WaitForSeconds(0.2f);
+        }
     }
 
     void SpawnEnemy()

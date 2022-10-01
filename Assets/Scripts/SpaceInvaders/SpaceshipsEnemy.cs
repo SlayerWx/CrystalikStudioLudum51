@@ -37,7 +37,12 @@ public class SpaceshipsEnemy : MonoBehaviour
         {
             Destroy(gameObject);
             Destroy(collision.gameObject);
-            ScoreManager.instance.AddScore();
+            PlayerManager.instance.AddScore();
+        }
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerManager.instance.TakeDamage();
         }
     }
 }
