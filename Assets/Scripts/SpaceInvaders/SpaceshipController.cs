@@ -55,7 +55,7 @@ public class SpaceshipController : MonoBehaviour
 
     void SpawnBullet()
     {
-        Instantiate(bulletPrefab, bulletSpawnPosition.position, Quaternion.identity);
+        Instantiate(bulletPrefab, bulletSpawnPosition.position, Quaternion.identity, transform.parent);
         timePerShootCounter = timePerShoot;
     }
 }

@@ -26,6 +26,11 @@ public class SpaceshipsEnemy : MonoBehaviour
         }
     }
 
+    private void OnDisable()
+    {
+        Destroy(gameObject);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("SpaceshipBullet"))

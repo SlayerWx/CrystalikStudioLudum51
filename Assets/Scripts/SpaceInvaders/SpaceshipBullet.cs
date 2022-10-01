@@ -31,4 +31,9 @@ public class SpaceshipBullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnDisable()
+    {
+        Destroy(gameObject);
+    }
 }
