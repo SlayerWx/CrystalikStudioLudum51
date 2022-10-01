@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    int score;
-
     public List<Level> levelList;
 
     Level actualLevel;
@@ -53,8 +51,5 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    public void AddScore()
-    {
-        score++;
-    }
+    
 }
