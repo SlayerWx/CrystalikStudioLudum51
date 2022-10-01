@@ -12,6 +12,8 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] float timePerLevel = 10;
 
+    [SerializeField] bool ableToChange;
+
     float levelChangeCounter;
 
     int newLevelId;
@@ -26,9 +28,12 @@ public class LevelManager : MonoBehaviour
     {
         levelChangeCounter -= Time.deltaTime;
 
-        if (levelChangeCounter <= 0)
+        if (ableToChange)
         {
-            ChangeGame();
+            if (levelChangeCounter <= 0)
+            {
+                ChangeGame();
+            }
         }
     }
 
