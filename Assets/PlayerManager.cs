@@ -12,7 +12,9 @@ public class PlayerManager : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI scoreText;
 
-    [SerializeField] int lifePoints;
+    [SerializeField] int maxLifePoints;
+
+    int lifePoints;
 
     int score;
 
@@ -27,6 +29,9 @@ public class PlayerManager : MonoBehaviour
         {
             instance = this;
         }
+
+        lifePoints = maxLifePoints;
+        lifePointsText.text = "HP: " + lifePoints.ToString();
     }
 
     public void TakeDamage()
