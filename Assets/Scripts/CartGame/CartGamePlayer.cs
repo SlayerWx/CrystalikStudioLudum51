@@ -7,24 +7,26 @@ public class CartGamePlayer : MonoBehaviour
     public float speed = 7f;
     public float left;
     public float right;
+    Rigidbody2D myBody;
     void Start()
     {
         left = Camera.main.ViewportToWorldPoint(Vector3.zero).x;
         right = Camera.main.ViewportToWorldPoint(Vector3.right).x;
         left -= transform.localScale.x / 2;
-        Debug.Log(left);
         right += transform.localScale.x / 2;
+        myBody = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
+        myBody.velocity = Vector2.zero;
         if (Input.GetKey(KeyCode.A))
         {
-            transform.position += Vector3.left * speed * Time.deltaTime;
+            myBody.velocity = Vector3.left * speed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            transform.position += Vector3.right * speed * Time.deltaTime;
+            myBody.velocity = Vector3.right * speed * Time.deltaTime;
 
         }
         if(transform.position.x > right )

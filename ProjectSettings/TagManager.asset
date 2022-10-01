@@ -7,6 +7,7 @@ TagManager:
   - SpaceshipBullet
   - Ground
   - Enemy
+  - PickUp
   layers:
   - Default
   - TransparentFX
