@@ -10,16 +10,15 @@ public class LevelManager : MonoBehaviour
 
     Level actualLevel;
 
-    float timePerLevel = 10;
+    [SerializeField] float timePerLevel = 10;
 
     float levelChangeCounter;
 
-    int newLevel;
+    int newLevelId;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-
+        actualLevel = levelList[Random.Range(0, levelList.Count)];
     }
 
     // Update is called once per frame
@@ -35,13 +34,13 @@ public class LevelManager : MonoBehaviour
 
     void ChangeGame()
     {
-        newLevel = Random.Range(0, levelList.Count);
+        newLevelId = Random.Range(0, levelList.Count);
 
-        if (newLevel != actualLevel.id)
+        if (newLevelId != actualLevel.id)
         {
             actualLevel.gameObject.SetActive(false);
 
-            actualLevel = levelList[Random.Range(0, levelList.Count)];
+            actualLevel = levelList[newLevelId];
 
             actualLevel.gameObject.SetActive(true);
 
