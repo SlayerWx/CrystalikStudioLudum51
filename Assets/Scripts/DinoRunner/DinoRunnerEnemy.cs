@@ -14,10 +14,6 @@ public class DinoRunnerEnemy : MonoBehaviour
 
     void Update()
     {
-        if (timer < maxTimer)
-        {
-            transform.position += Vector3.right * speed * Time.deltaTime;
-            timer += Time.deltaTime;
-        }
+        transform.position += Vector3.left * speed * Time.deltaTime;
     }
 }
