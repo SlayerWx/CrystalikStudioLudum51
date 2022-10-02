@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Audio;
 public class DinoRunnerPlayer : MonoBehaviour
 {
     public bool jump;
@@ -11,6 +11,8 @@ public class DinoRunnerPlayer : MonoBehaviour
     public bool crouching = false;
     public GameObject standing;
     public GameObject crouch;
+    public AudioSource jumpAudio;
+    public AudioSource bendAudio;
     void Start()
     {
         myBody = GetComponent<Rigidbody2D>();
@@ -27,6 +29,7 @@ public class DinoRunnerPlayer : MonoBehaviour
         {
             myBody.velocity = new Vector2(0, jumpForce);
             jump = true;
+            jumpAudio.Play();
         }
         if(Input.GetKey(KeyCode.S))
         {
@@ -34,9 +37,11 @@ public class DinoRunnerPlayer : MonoBehaviour
             {
                 standing.SetActive(false);
                 crouch.SetActive(true);
+                if(!jumpAudio.isPlaying)bendAudio.Play();
             }
             crouching = true;
-            if(jump)
+
+            if (jump)
             {
                 myBody.AddForce(Vector2.down * downForce * Time.deltaTime);
             }
