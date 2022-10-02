@@ -22,7 +22,7 @@ public class Penguin : MonoBehaviour
             _rigidbody.velocity = new Vector2(0, _jumpSpeed);
         }
 
-        if(transform.position.y <= -8f)
+        if (transform.localPosition.y <= -8f)
         {
             PlayerManager.instance.TakeDamage();
         }
