@@ -5,16 +5,17 @@ using UnityEngine;
 public class CartGamePickUp : MonoBehaviour
 {
     public float speed;
-    public float endY;
-
+    public float end;
+    public Vector3 axis;
     // Update is called once per frame
     void Update()
     {
-        transform.position += Vector3.down * speed * Time.deltaTime;
-        if (transform.position.y < endY)
+        transform.position += axis * speed * Time.deltaTime;
+        if (transform.position.y < end && axis.y != 0)
+            gameObject.SetActive(false);
+        if (transform.position.x < end && axis.x != 0)
             gameObject.SetActive(false);
 
-        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

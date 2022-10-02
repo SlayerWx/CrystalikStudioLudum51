@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c291cc199dcfd8c4e9e1950b4f659b26
+guid: 4278e563b7bfd7549beb75178fdb9a73
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -36,18 +36,18 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 300
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -102,91 +102,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Brujita_sheet_0
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 46
-        width: 370
-        height: 891
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 014474f2926a5f1449028b397fd3823f
-      internalID: -1035928694
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Brujita_sheet_1
-      rect:
-        serializedVersion: 2
-        x: 557
-        y: 49
-        width: 427
-        height: 889
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6aebeae13a7c8b848a78f6123b0a82a0
-      internalID: -1246783874
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Brujita_sheet_2
-      rect:
-        serializedVersion: 2
-        x: 1098
-        y: 49
-        width: 428
-        height: 888
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4ae571bac92c5f7469d6f4d6a6c1a61a
-      internalID: 254371788
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Brujita_sheet_3
-      rect:
-        serializedVersion: 2
-        x: 1622
-        y: 97
-        width: 539
-        height: 840
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 32348daef178e16479c0e82386c2b083
-      internalID: 355400907
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -197,12 +113,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Brujita_sheet_4: -906659298
-      Brujita_sheet_3: 355400907
-      Brujita_sheet_2: 254371788
-      Brujita_sheet_1: -1246783874
-      Brujita_sheet_0: -1035928694
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c291cc199dcfd8c4e9e1950b4f659b26
+guid: cfdad2120a4207e459ddb2536ba3f417
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 300
+  spritePixelsToUnits: 320
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -104,85 +104,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Brujita_sheet_0
+      name: murcielago_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 46
-        width: 370
-        height: 891
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 16
+        y: 322
+        width: 689
+        height: 489
+      alignment: 9
+      pivot: {x: 0.70692575, y: 0.35375378}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 014474f2926a5f1449028b397fd3823f
-      internalID: -1035928694
+      spriteID: cd996379108410341a36d1892fc1725b
+      internalID: 1157079482
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Brujita_sheet_1
+      name: murcielago_1
       rect:
         serializedVersion: 2
-        x: 557
-        y: 49
-        width: 427
-        height: 889
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 705
+        y: 322
+        width: 706
+        height: 354
+      alignment: 9
+      pivot: {x: 0.71305716, y: 0.48840082}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6aebeae13a7c8b848a78f6123b0a82a0
-      internalID: -1246783874
+      spriteID: 7a3e8a6a862319a4f8d207e488a11c7b
+      internalID: 342763408
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Brujita_sheet_2
+      name: murcielago_2
       rect:
         serializedVersion: 2
-        x: 1098
-        y: 49
-        width: 428
-        height: 888
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1426
+        y: 0
+        width: 687
+        height: 690
+      alignment: 9
+      pivot: {x: 0.705576, y: 0.71576315}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ae571bac92c5f7469d6f4d6a6c1a61a
-      internalID: 254371788
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Brujita_sheet_3
-      rect:
-        serializedVersion: 2
-        x: 1622
-        y: 97
-        width: 539
-        height: 840
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 32348daef178e16479c0e82386c2b083
-      internalID: 355400907
+      spriteID: e93e6ac8e32b6ba4ab9f2530f8479464
+      internalID: -825672587
       vertices: []
       indices: 
       edges: []
@@ -198,11 +177,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Brujita_sheet_4: -906659298
-      Brujita_sheet_3: 355400907
-      Brujita_sheet_2: 254371788
-      Brujita_sheet_1: -1246783874
-      Brujita_sheet_0: -1035928694
+      murcielago_0: 1157079482
+      murcielago_1: 342763408
+      murcielago_2: -825672587
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
