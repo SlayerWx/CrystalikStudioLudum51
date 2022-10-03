@@ -12,12 +12,14 @@ namespace Game
 
         public void SetMusicVolume(float volume)
         {
-            audioMixer.SetFloat(volumeKey, Mathf.Log10(volume) * 20);
+            //audioMixer.SetFloat(volumeKey, Mathf.Log10(volume) * 20);
+            audioMixer.SetFloat(volumeKey,volume);
         }
 
         public void SetSFXVolume(float volume)
         {
-            SFXMixer.SetFloat(volumeKey, Mathf.Log10(volume) * 20);
+            //SFXMixer.SetFloat(volumeKey, Mathf.Log10(volume) * 20);
+            SFXMixer.SetFloat(volumeKey, volume);
         }
     }
 }
