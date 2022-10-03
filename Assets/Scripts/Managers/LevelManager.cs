@@ -10,7 +10,8 @@ public class LevelManager : MonoBehaviour
     GameObject actualLevel;
 
     GameObject ruidoAnimation;
-
+    public GameObject hpObj;
+    public GameObject scoreObj;
     [SerializeField] float timePerLevel = 10;
 
     [SerializeField] bool ableToChange;
@@ -64,9 +65,13 @@ public class LevelManager : MonoBehaviour
     {
         timerOn = false;
         if (actualLevel) Destroy(actualLevel);
+        hpObj.SetActive(false);
+        scoreObj.SetActive(false);
         ruidoAnimation.SetActive(true);
         yield return new WaitForSeconds(0.5f);
         ruidoAnimation.SetActive(false);
+        hpObj.SetActive(true);
+        scoreObj.SetActive(true);
 
         ChangeGameNow();
         levelChangeCounter = timePerLevel;
