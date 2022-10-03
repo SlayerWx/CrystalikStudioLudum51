@@ -13,14 +13,6 @@ public class PenguinLevel : Level
         ResetGame();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            ResetGame();
-        }
-    }
-
     public void ResetGame()
     {
         _penguin.ResetPenguin();

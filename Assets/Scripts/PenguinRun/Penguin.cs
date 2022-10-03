@@ -10,8 +10,8 @@ public class Penguin : MonoBehaviour
     [SerializeField] private Rigidbody2D _rigidbody;
     [SerializeField] private float _movementSpeed;
     [SerializeField] private float _jumpSpeed;
- 
-    [Space,SerializeField] private float _distanceGround;
+
+    [Space, SerializeField] private float _distanceGround;
 
     [SerializeField] private bool _isGrounded;
 
@@ -24,7 +24,10 @@ public class Penguin : MonoBehaviour
 
         if (transform.localPosition.y <= -8f)
         {
-            PlayerManager.instance.TakeDamage();
+            if (PlayerManager.instance != null)
+            {
+                PlayerManager.instance.TakeDamage();
+            }
         }
     }
 
@@ -34,7 +37,7 @@ public class Penguin : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
-    { 
+    {
         float collisionTopPosY = collision.transform.position.y + (collision.transform.localScale.y / 2f);
         float posYPlayer = transform.position.y - (transform.localScale.y / 4f);
 
@@ -45,7 +48,7 @@ public class Penguin : MonoBehaviour
     {
         _isGrounded = false;
     }
-    
+
     public void ResetPenguin()
     {
         transform.position = _spawnPosition.position;
