@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class SpaceshipController : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class SpaceshipController : MonoBehaviour
 
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] Transform bulletSpawnPosition;
+
+    [SerializeField] AudioSource shootAudio;
 
     Rigidbody2D rb;
 
@@ -55,6 +58,7 @@ public class SpaceshipController : MonoBehaviour
 
     void SpawnBullet()
     {
+        shootAudio.Play();
         Instantiate(bulletPrefab, bulletSpawnPosition.position, Quaternion.identity, transform.parent);
         timePerShootCounter = timePerShoot;
     }

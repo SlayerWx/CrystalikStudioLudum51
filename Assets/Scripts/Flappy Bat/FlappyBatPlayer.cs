@@ -7,6 +7,10 @@ public class FlappyBatPlayer : MonoBehaviour
     [SerializeField] private Rigidbody2D _rigidbody;
     [SerializeField] private float force = 1.5f;
     [SerializeField] private float yBound = -8;
+
+    [SerializeField] AudioSource jumpAudio;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +33,7 @@ public class FlappyBatPlayer : MonoBehaviour
     }
     private void Flap()
     {
+        jumpAudio.Play();
         _rigidbody.velocity = Vector2.zero;
         //_rigidbody.AddForce(Vector2.up * force * Time.deltaTime);
         _rigidbody.velocity = Vector2.up * force;

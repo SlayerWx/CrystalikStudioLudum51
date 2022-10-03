@@ -12,7 +12,7 @@ public class SetScore : MonoBehaviour
     {
         scoreText.text = "Score: " + scoreScriptable.score.ToString();
     }
-
+        
     // Start is called before the first frame update
     void Start()
     {

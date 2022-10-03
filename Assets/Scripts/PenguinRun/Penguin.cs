@@ -17,11 +17,15 @@ public class Penguin : MonoBehaviour
     [SerializeField] Animator _animator;
     [SerializeField] SpriteRenderer _spriteRenderer;
     [SerializeField] Transform _groundCheck;
+
+    [SerializeField] AudioSource jumpAudio;
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)
         {
             _rigidbody.velocity = new Vector2(0, _jumpSpeed);
+            jumpAudio.Play();
         }
 
         if (transform.localPosition.y <= -8f)
