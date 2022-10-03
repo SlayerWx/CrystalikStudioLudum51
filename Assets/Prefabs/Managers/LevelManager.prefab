@@ -153,6 +153,8 @@ MonoBehaviour:
   levelList:
   - {fileID: 4177548689222437987, guid: 240cdd319a1c5c343b5022e5782d9829, type: 3}
   - {fileID: 7750229799729763250, guid: 779459313791c3d40b67cb7c5844e322, type: 3}
-  ruidoAnimation: {fileID: 1005122545}
+  - {fileID: 1502464264732855286, guid: fc649091a99292e4182602e388f3dbf7, type: 3}
+  - {fileID: 7689290991787895227, guid: d1fafb6e7bbbba24d9cb5e7106da7e4b, type: 3}
+  - {fileID: 7551134075771940282, guid: fbe54811c28ad5549993941cfd10f059, type: 3}
   timePerLevel: 10
   ableToChange: 1

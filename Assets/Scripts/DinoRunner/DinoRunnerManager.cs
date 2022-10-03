@@ -8,7 +8,7 @@ public class DinoRunnerManager : Level
     public Transform spawn;
     void OnEnable()
     {
-        Instantiate(presets[Random.Range(0,presets.Length)], spawn.position,Quaternion.identity,null);
+        Instantiate(presets[Random.Range(0,presets.Length)], spawn.position,Quaternion.identity,spawn);
     }
 
 }

@@ -18,7 +18,8 @@ public class LevelManager : MonoBehaviour
     float levelChangeCounter;
 
     int newLevelId;
-
+    int idLevel = - 99;
+    bool timerOn;
     private void Awake()
     {
         ruidoAnimation = transform.Find("Ruido_02").gameObject;
@@ -26,14 +27,13 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
+        timerOn = false;
         StartCoroutine(AnimNoiseCoroutine());
-        actualLevel = Instantiate(levelList[Random.Range(0, levelList.Count)]);
     }
 
     // Update is called once per frame
     void Update()
     {
-        levelChangeCounter -= Time.deltaTime;
 
         if (ableToChange)
         {
@@ -41,45 +41,51 @@ public class LevelManager : MonoBehaviour
             {
                 ChangeGame();
             }
+            if(timerOn) levelChangeCounter -= Time.smoothDeltaTime;
         }
     }
-
     public void ChangeGame()
     {
-        StartCoroutine(AnimNoiseCoroutine());
-        newLevelId = Random.Range(0, levelList.Count);
+        if(timerOn) StartCoroutine(AnimNoiseCoroutine());
 
-        if (newLevelId != actualLevel.GetComponent<Level>().id)
-        {
-            Destroy(actualLevel.gameObject);
-
-            actualLevel = Instantiate(levelList[newLevelId]);
-
-            levelChangeCounter = timePerLevel;
-        }
     }
-
-    public void ChangeGameImmediately()
+    void ChangeGameNow()
     {
-        StartCoroutine(AnimNoiseCoroutine());
-        Destroy(actualLevel);
-
-        if (actualLevel.GetComponent<Level>().id != levelList.Count)
+        NewLevelSelector(idLevel);
+        if (newLevelId != idLevel)
         {
-            actualLevel = Instantiate(levelList[actualLevel.GetComponent<Level>().id + 1]);
-        }
-        else
-        {
-            actualLevel = levelList[0];
+            actualLevel = Instantiate(levelList[newLevelId]);
+            idLevel = newLevelId;
         }
 
-        levelChangeCounter = timePerLevel;
     }
 
     IEnumerator AnimNoiseCoroutine()
     {
+        timerOn = false;
+        if (actualLevel) Destroy(actualLevel);
         ruidoAnimation.SetActive(true);
         yield return new WaitForSeconds(0.5f);
         ruidoAnimation.SetActive(false);
+
+        ChangeGameNow();
+        levelChangeCounter = timePerLevel;
+        timerOn = true;
+    }
+
+    int NewLevelSelector(int lastLevelId)
+    {
+        int aux = 0;
+        do
+        {
+            newLevelId = Random.Range(0, levelList.Count);
+            aux++;
+            if(aux>9)
+            {
+                lastLevelId = -99;
+                newLevelId = 0;
+            }
+        } while (newLevelId == lastLevelId);
+        return lastLevelId;
     }
 }

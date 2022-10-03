@@ -15,7 +15,7 @@ public class CartGameSpawner : MonoBehaviour
         objects = new List<GameObject>();
         for(int i = 0;i < objectAmount; i++)
         {
-            objects.Add(Instantiate(objectPrefab,Vector3.zero,Quaternion.identity,null));
+            objects.Add(Instantiate(objectPrefab,Vector3.zero,Quaternion.identity,transform.parent));
         }
         timer = maxTimer;
     }

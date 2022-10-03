@@ -646,7 +646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db4561306437ebe4f90319f7e78fc327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 2
   presets:
   - {fileID: 2395326527510731605, guid: bcf665f32d6bd124ca2aa625e357bbf5, type: 3}
   - {fileID: 2395326527510731605, guid: b486c1a2180984749914e9c6713be184, type: 3}

@@ -59,5 +59,9 @@ public class DinoRunnerPlayer : MonoBehaviour
         {
             jump = false;
         }
+        if (collision.gameObject.tag == "Enemy")
+        {
+            if (PlayerManager.instance) PlayerManager.instance.TakeDamage();
+        }
     }
 }
