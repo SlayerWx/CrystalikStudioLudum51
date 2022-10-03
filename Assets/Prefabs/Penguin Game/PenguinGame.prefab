@@ -589,12 +589,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9064672161091302765, guid: 915099e930cde5444ac0da721d7daf5e, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5680628
+      objectReference: {fileID: 0}
+    - target: {fileID: 9064672161091302765, guid: 915099e930cde5444ac0da721d7daf5e, type: 3}
+      propertyPath: m_Size.y
+      value: 2.6380274
+      objectReference: {fileID: 0}
+    - target: {fileID: 9064672161091302765, guid: 915099e930cde5444ac0da721d7daf5e, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.07460737
+      objectReference: {fileID: 0}
+    - target: {fileID: 9064672161091302765, guid: 915099e930cde5444ac0da721d7daf5e, type: 3}
+      propertyPath: m_Offset.y
+      value: 1.5415269
+      objectReference: {fileID: 0}
+    - target: {fileID: 9064672161091302766, guid: 915099e930cde5444ac0da721d7daf5e, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 515930748543046628}
     - target: {fileID: 9064672161091302766, guid: 915099e930cde5444ac0da721d7daf5e, type: 3}
       propertyPath: _spawnPosition
       value: 
       objectReference: {fileID: 7551134075893116880}
+    - target: {fileID: 9064672161091302766, guid: 915099e930cde5444ac0da721d7daf5e, type: 3}
+      propertyPath: _spriteRenderer
+      value: 
+      objectReference: {fileID: 7551134075236427869}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 915099e930cde5444ac0da721d7daf5e, type: 3}
+--- !u!95 &515930748543046628 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1310511666557661906, guid: 915099e930cde5444ac0da721d7daf5e, type: 3}
+  m_PrefabInstance: {fileID: 1515227227156947254}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &7551134075236427869 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 9064672160322161003, guid: 915099e930cde5444ac0da721d7daf5e, type: 3}
+  m_PrefabInstance: {fileID: 1515227227156947254}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7551134076406109269 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9064672161091302755, guid: 915099e930cde5444ac0da721d7daf5e, type: 3}
