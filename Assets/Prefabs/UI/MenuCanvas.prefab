@@ -2337,6 +2337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 6
+  img: {fileID: 726513508052147659}
 --- !u!1 &9031580675795538912
 GameObject:
   m_ObjectHideFlags: 0
