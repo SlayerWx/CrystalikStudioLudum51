@@ -9,6 +9,9 @@ public class PenguinPlatformsController : MonoBehaviour
 
     [SerializeField] private GameObject _platformPrefab;
     [SerializeField] private List<GameObject> _platformsCreated;
+    [SerializeField] private GameObject _coinPrefab;
+    [SerializeField] private float _coinOffsetY;
+    [SerializeField] private float _coinSpeed;
 
     [SerializeField] private float _platformsMovementSpeed;
 
@@ -70,6 +73,10 @@ public class PenguinPlatformsController : MonoBehaviour
         GameObject platform = Instantiate(_platformPrefab, _spawnPosition.position, Quaternion.identity, this.transform);
         _platformsCreated.Add(platform);
         RandomizePlatform(platform.transform);
+        GameObject coin = Instantiate(_coinPrefab, platform.transform.position + Vector3.up * _coinOffsetY, Quaternion.identity, this.transform);
+        CartGamePickUp aux = coin.GetComponent<CartGamePickUp>();
+        aux.speed = _coinSpeed;
+        coin.SetActive(true);
     }
 
     public void ResetPlatforms()
