@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
+
 
 public class PlayerManager : MonoBehaviour
 {
+    public UnityEvent onTakeDamage;
+
     public static PlayerManager instance;
 
     [SerializeField] TextMeshProUGUI lifePointsText;
@@ -43,6 +47,8 @@ public class PlayerManager : MonoBehaviour
         {
             SceneManager.LoadScene("EndGameScreen");
         }
+        
+        onTakeDamage?.Invoke();
     }
 
     public void AddScore()

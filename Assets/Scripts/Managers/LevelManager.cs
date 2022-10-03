@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class LevelManager : MonoBehaviour
 {
@@ -35,7 +36,7 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    void ChangeGame()
+    public void ChangeGame()
     {
         newLevelId = Random.Range(0, levelList.Count);
 
@@ -51,5 +52,21 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    
+    public void ChangeGameImmediately()
+    {
+        actualLevel.gameObject.SetActive(false);
+
+        if (actualLevel.id != levelList.Count)
+        {
+            actualLevel = levelList[actualLevel.id + 1];
+        }
+        else
+        {
+            actualLevel = levelList[0];
+        }
+
+        actualLevel.gameObject.SetActive(true);
+
+        levelChangeCounter = timePerLevel;
+    }
 }
