@@ -348,6 +348,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 813723834629678977, guid: b2b1891deaa13ef40a7fe87fe9e97b00, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0.000061035
+      objectReference: {fileID: 0}
+    - target: {fileID: 813723834629678977, guid: b2b1891deaa13ef40a7fe87fe9e97b00, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 813723834629678977, guid: b2b1891deaa13ef40a7fe87fe9e97b00, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 813723834629678977, guid: b2b1891deaa13ef40a7fe87fe9e97b00, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 817735658363042361, guid: b2b1891deaa13ef40a7fe87fe9e97b00, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
