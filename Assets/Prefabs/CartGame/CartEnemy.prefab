@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 427811001989748647}
   - component: {fileID: 8374456330286545192}
   - component: {fileID: 506389211035637179}
-  - component: {fileID: 698196319907843479}
+  - component: {fileID: 2670194766279141724}
   m_Layer: 0
   m_Name: CartEnemy
   m_TagString: Enemy
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 639801956510054791}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.9, y: 1.9, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: df02fe73b06073f4fae742bcb7a7daa4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,8 +100,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   endY: -10
---- !u!58 &698196319907843479
-CircleCollider2D:
+--- !u!70 &2670194766279141724
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -113,6 +113,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
+  m_Offset: {x: 0.0043531656, y: 0.0076642036}
+  m_Size: {x: 1.588974, y: 2.6114006}
+  m_Direction: 0

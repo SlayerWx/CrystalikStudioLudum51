@@ -8,6 +8,7 @@ public class CartGameSpawner : MonoBehaviour
     public float objectAmount;
     List<GameObject> objects;
     public float maxTimer;
+    public float Xzone;
     float timer;
     void Awake()
     {
@@ -44,7 +45,7 @@ public class CartGameSpawner : MonoBehaviour
         if (objetOfThePool != null)
         {
             objetOfThePool.SetActive(true);
-            objetOfThePool.transform.position = transform.position + new Vector3(Random.Range(-transform.localScale.x/2, transform.localScale.x/2), 0, 0);
+            objetOfThePool.transform.position = transform.position + new Vector3(Random.Range(-Xzone, Xzone), 0, 0);
         }
 
     }
