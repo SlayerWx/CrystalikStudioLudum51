@@ -41,7 +41,7 @@ public class DinoRunnerPlayer : MonoBehaviour
         //    }
         //    crouching = true;
 
-        if (Input.GetButton("down"))
+        if (Input.GetKey(KeyCode.S))
         {
             if (jump)
             {
