@@ -9,7 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2670476839999323581, guid: 634776bce89751f4586da0c14d3a2fd7, type: 3}
       propertyPath: m_Name
-      value: PickUp DinoRunner
+      value: PickUp DinoRunner 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2670476839999323581, guid: 634776bce89751f4586da0c14d3a2fd7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2882755807528276893, guid: 634776bce89751f4586da0c14d3a2fd7, type: 3}
       propertyPath: m_RootOrder

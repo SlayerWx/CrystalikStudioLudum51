@@ -25,37 +25,40 @@ public class DinoRunnerPlayer : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && jump == false && !crouching)
+        if (Input.GetKeyDown(KeyCode.Space) && jump == false && !crouching)
         {
             myBody.velocity = new Vector2(0, jumpForce);
             jump = true;
             jumpAudio.Play();
         }
-        if(Input.GetKey(KeyCode.S))
-        {
-            if (!crouching)
-            {
-                standing.SetActive(false);
-                crouch.SetActive(true);
-                if(!jumpAudio.isPlaying)bendAudio.Play();
-            }
-            crouching = true;
+        //if(Input.GetKey(KeyCode.S))
+        //{
+        //    if (!crouching)
+        //    {
+        //        standing.SetActive(false);
+        //        crouch.SetActive(true);
+        //        if(!jumpAudio.isPlaying)bendAudio.Play();
+        //    }
+        //    crouching = true;
 
+        if (Input.GetButton("down"))
+        {
             if (jump)
             {
                 myBody.AddForce(Vector2.down * downForce * Time.deltaTime);
             }
         }
-        else if(crouch.activeSelf == true && crouching)
-        {
-            crouching = false;
-            crouch.SetActive(false);
-            standing.SetActive(true);
-        }
+        //}
+        //else if(crouch.activeSelf == true && crouching)
+        //{
+        //    crouching = false;
+        //    crouch.SetActive(false);
+        //    standing.SetActive(true);
+        //}
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Ground")
+        if (collision.gameObject.tag == "Ground")
         {
             jump = false;
         }
