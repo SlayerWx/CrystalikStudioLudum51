@@ -31,7 +31,7 @@ public class DinoRunnerPlayer : MonoBehaviour
             jump = true;
             jumpAudio.Play();
         }
-        if(Input.GetKey(KeyCode.LeftControl))
+        if(Input.GetKey(KeyCode.S))
         {
             if (!crouching)
             {
