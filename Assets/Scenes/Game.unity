@@ -546,6 +546,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1492275113, guid: 240cdd319a1c5c343b5022e5782d9829, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 174633039}
     - target: {fileID: 4177548689222437984, guid: 240cdd319a1c5c343b5022e5782d9829, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -593,14 +597,6 @@ PrefabInstance:
     - target: {fileID: 4177548689222437987, guid: 240cdd319a1c5c343b5022e5782d9829, type: 3}
       propertyPath: m_Name
       value: SpaceshipLevel
-      objectReference: {fileID: 0}
-    - target: {fileID: 4177548689222437987, guid: 240cdd319a1c5c343b5022e5782d9829, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4177548690246050627, guid: 240cdd319a1c5c343b5022e5782d9829, type: 3}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 240cdd319a1c5c343b5022e5782d9829, type: 3}
