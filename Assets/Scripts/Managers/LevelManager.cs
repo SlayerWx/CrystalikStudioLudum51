@@ -5,9 +5,9 @@ using UnityEngine.Events;
 
 public class LevelManager : MonoBehaviour
 {
-    public List<Level> levelList;
+    public List<GameObject> levelList;
 
-    Level actualLevel;
+    GameObject actualLevel;
 
     [SerializeField] float timePerLevel = 10;
 
@@ -19,7 +19,7 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        actualLevel = levelList[Random.Range(0, levelList.Count)];
+        actualLevel = Instantiate(levelList[Random.Range(0, levelList.Count)]);
     }
 
     // Update is called once per frame
@@ -40,13 +40,11 @@ public class LevelManager : MonoBehaviour
     {
         newLevelId = Random.Range(0, levelList.Count);
 
-        if (newLevelId != actualLevel.id)
+        if (newLevelId != actualLevel.GetComponent<Level>().id)
         {
-            actualLevel.gameObject.SetActive(false);
+            Destroy(actualLevel.gameObject);
 
-            actualLevel = levelList[newLevelId];
-
-            actualLevel.gameObject.SetActive(true);
+            actualLevel = Instantiate(levelList[newLevelId]);
 
             levelChangeCounter = timePerLevel;
         }
@@ -54,18 +52,16 @@ public class LevelManager : MonoBehaviour
 
     public void ChangeGameImmediately()
     {
-        actualLevel.gameObject.SetActive(false);
+        Destroy(actualLevel);
 
-        if (actualLevel.id != levelList.Count)
+        if (actualLevel.GetComponent<Level>().id != levelList.Count)
         {
-            actualLevel = levelList[actualLevel.id + 1];
+            actualLevel = Instantiate(levelList[actualLevel.GetComponent<Level>().id + 1]);
         }
         else
         {
             actualLevel = levelList[0];
         }
-
-        actualLevel.gameObject.SetActive(true);
 
         levelChangeCounter = timePerLevel;
     }
