@@ -9,6 +9,8 @@ public class LevelManager : MonoBehaviour
 
     GameObject actualLevel;
 
+    GameObject ruidoAnimation;
+
     [SerializeField] float timePerLevel = 10;
 
     [SerializeField] bool ableToChange;
@@ -17,8 +19,14 @@ public class LevelManager : MonoBehaviour
 
     int newLevelId;
 
+    private void Awake()
+    {
+        ruidoAnimation = transform.Find("Ruido_02").gameObject;
+    }
+
     private void Start()
     {
+        StartCoroutine(AnimNoiseCoroutine());
         actualLevel = Instantiate(levelList[Random.Range(0, levelList.Count)]);
     }
 
@@ -38,6 +46,7 @@ public class LevelManager : MonoBehaviour
 
     public void ChangeGame()
     {
+        StartCoroutine(AnimNoiseCoroutine());
         newLevelId = Random.Range(0, levelList.Count);
 
         if (newLevelId != actualLevel.GetComponent<Level>().id)
@@ -52,6 +61,7 @@ public class LevelManager : MonoBehaviour
 
     public void ChangeGameImmediately()
     {
+        StartCoroutine(AnimNoiseCoroutine());
         Destroy(actualLevel);
 
         if (actualLevel.GetComponent<Level>().id != levelList.Count)
@@ -64,5 +74,12 @@ public class LevelManager : MonoBehaviour
         }
 
         levelChangeCounter = timePerLevel;
+    }
+
+    IEnumerator AnimNoiseCoroutine()
+    {
+        ruidoAnimation.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        ruidoAnimation.SetActive(false);
     }
 }
