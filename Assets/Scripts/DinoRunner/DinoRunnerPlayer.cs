@@ -25,13 +25,13 @@ public class DinoRunnerPlayer : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.A) && jump == false && !crouching)
+        if(Input.GetKeyDown(KeyCode.Space) && jump == false && !crouching)
         {
             myBody.velocity = new Vector2(0, jumpForce);
             jump = true;
             jumpAudio.Play();
         }
-        if(Input.GetKey(KeyCode.S))
+        if(Input.GetKey(KeyCode.LeftControl))
         {
             if (!crouching)
             {
