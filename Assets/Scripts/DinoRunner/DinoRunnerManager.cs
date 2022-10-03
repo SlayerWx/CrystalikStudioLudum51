@@ -6,9 +6,13 @@ public class DinoRunnerManager : Level
 {
     public GameObject[] presets;
     public Transform spawn;
+    public int presetSelected;
     void OnEnable()
     {
-        Instantiate(presets[Random.Range(0,presets.Length)], spawn.position,Quaternion.identity,spawn);
+        presetSelected = Random.Range(0, presets.Length);
+        Instantiate(presets[presetSelected], spawn.position,Quaternion.identity,spawn);
+        Debug.Log(presetSelected);
+
     }
 
 }
