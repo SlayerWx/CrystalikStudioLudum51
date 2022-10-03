@@ -707,6 +707,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2146897704}
     - target: {fileID: 5867154425334104998, guid: e9525843035a1da46a977ea9eafe219a, type: 3}
+      propertyPath: scoreScriptable
+      value: 
+      objectReference: {fileID: 11400000, guid: a0e5065b31fd9c943b977b0078ef193c, type: 2}
+    - target: {fileID: 5867154425334104998, guid: e9525843035a1da46a977ea9eafe219a, type: 3}
       propertyPath: onTakeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1629273231}

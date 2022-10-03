@@ -22,11 +22,11 @@ public class CartGamePlayer : MonoBehaviour
         myBody.velocity = Vector2.zero;
         if (Input.GetKey(KeyCode.A))
         {
-            myBody.velocity = Vector3.left * speed * Time.deltaTime;
+            myBody.velocity = Vector3.left * speed;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            myBody.velocity = Vector3.right * speed * Time.deltaTime;
+            myBody.velocity = Vector3.right * speed;
 
         }
         if(transform.position.x > right )

@@ -20,7 +20,7 @@ public class PlayerManager : MonoBehaviour
 
     int lifePoints;
 
-    int score;
+    [SerializeField] ScoreScriptable scoreScriptable;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +36,7 @@ public class PlayerManager : MonoBehaviour
 
         lifePoints = maxLifePoints;
         lifePointsText.text = "HP: " + lifePoints.ToString();
+        scoreText.text = "Score: " + scoreScriptable.score.ToString();
     }
 
     public void TakeDamage()
@@ -53,7 +54,7 @@ public class PlayerManager : MonoBehaviour
 
     public void AddScore()
     {
-        score++;
-        scoreText.text = "Score: " + score.ToString();
+        scoreScriptable.score++;
+        scoreText.text = "Score: " + scoreScriptable.score.ToString();
     }
 }
